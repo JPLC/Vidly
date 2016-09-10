@@ -6,6 +6,28 @@ namespace Vidly.Migrations
     {
         public override void Up()
         {
+            Sql(@"IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
+                drop table dbo.Customers
+                IF OBJECT_ID('dbo.Movies', 'U') IS NOT NULL
+                drop table dbo.Movies
+                IF OBJECT_ID('dbo.Genres', 'U') IS NOT NULL
+                drop table dbo.Genres
+                IF OBJECT_ID('dbo.MembershipTypes', 'U') IS NOT NULL
+                drop table dbo.MembershipTypes
+                IF OBJECT_ID('dbo.__MigrationHistory', 'U') IS NOT NULL
+                drop table dbo.__MigrationHistory
+                IF OBJECT_ID('dbo.AspNetUserRoles', 'U') IS NOT NULL
+                drop table dbo.AspNetUserRoles
+                IF OBJECT_ID('dbo.AspNetRoles', 'U') IS NOT NULL
+                drop table dbo.AspNetRoles
+                IF OBJECT_ID('dbo.AspNetUserClaims', 'U') IS NOT NULL
+                drop table dbo.AspNetUserClaims
+                IF OBJECT_ID('dbo.AspNetUserLogins', 'U') IS NOT NULL
+                drop table dbo.AspNetUserLogins
+                IF OBJECT_ID('dbo.AspNetUsers', 'U') IS NOT NULL
+                drop table dbo.AspNetUsers
+                ");
+
             CreateTable(
                 "dbo.Customers",
                 c => new
