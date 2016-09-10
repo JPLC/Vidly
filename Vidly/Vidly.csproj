@@ -235,9 +235,18 @@
     <Compile Include="Migrations\201609092354404_AddColumnBirthDateToCustomer.Designer.cs">
       <DependentUpon>201609092354404_AddColumnBirthDateToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609100010459_AddGenreTable.cs" />
+    <Compile Include="Migrations\201609100010459_AddGenreTable.Designer.cs">
+      <DependentUpon>201609100010459_AddGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609100013008_PopulateGenres.cs" />
+    <Compile Include="Migrations\201609100013008_PopulateGenres.Designer.cs">
+      <DependentUpon>201609100013008_PopulateGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -349,6 +358,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609092354404_AddColumnBirthDateToCustomer.resx">
       <DependentUpon>201609092354404_AddColumnBirthDateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609100010459_AddGenreTable.resx">
+      <DependentUpon>201609100010459_AddGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609100013008_PopulateGenres.resx">
+      <DependentUpon>201609100013008_PopulateGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
