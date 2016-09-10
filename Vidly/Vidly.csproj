@@ -257,6 +257,7 @@
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -326,6 +327,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <None Include="Views\Customers\Details.cshtml" />
     <None Include="Views\Customers\Index.cshtml" />
+    <None Include="Views\Customers\CustomerForm.cshtml" />
     <None Include="Views\Movies\Details.cshtml" />
     <None Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
