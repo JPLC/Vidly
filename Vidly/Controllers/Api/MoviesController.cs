@@ -61,7 +61,7 @@ namespace Vidly.Controllers.Api
             if (!ModelState.IsValid)
                 return BadRequest();
 
-            var movieInDd = _context.Movies.Single(c => c.Id == id);
+            var movieInDd = _context.Movies.SingleOrDefault(c => c.Id == id);
 
             if (movieInDd == null)
                 return NotFound();
@@ -77,7 +77,7 @@ namespace Vidly.Controllers.Api
         [HttpDelete]
         public IHttpActionResult DeleteMovie(int id)
         {
-            var movieInDd = _context.Movies.Single(c => c.Id == id);
+            var movieInDd = _context.Movies.SingleOrDefault(c => c.Id == id);
             if (movieInDd == null)
                 return NotFound();
 

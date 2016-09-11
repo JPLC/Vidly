@@ -61,7 +61,7 @@ namespace Vidly.Controllers.Api
             if (!ModelState.IsValid)
                 return BadRequest();
 
-            var customerInDd = _context.Customers.Single(c => c.Id == id);
+            var customerInDd = _context.Customers.SingleOrDefault(c => c.Id == id);
 
             if (customerInDd == null)
                 return NotFound();
@@ -77,7 +77,7 @@ namespace Vidly.Controllers.Api
         [HttpDelete]
         public IHttpActionResult DeleteCustomer(int id)
         {
-            var customerInDd = _context.Customers.Single(c => c.Id == id);
+            var customerInDd = _context.Customers.SingleOrDefault(c => c.Id == id);
             if (customerInDd == null)
                 return NotFound();
 
