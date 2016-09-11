@@ -13,9 +13,7 @@ namespace Vidly.Migrations
                 IF OBJECT_ID('dbo.Genres', 'U') IS NOT NULL
                 drop table dbo.Genres
                 IF OBJECT_ID('dbo.MembershipTypes', 'U') IS NOT NULL
-                drop table dbo.MembershipTypes
-                IF OBJECT_ID('dbo.__MigrationHistory', 'U') IS NOT NULL
-                drop table dbo.__MigrationHistory
+                drop table dbo.MembershipTypes          
                 IF OBJECT_ID('dbo.AspNetUserRoles', 'U') IS NOT NULL
                 drop table dbo.AspNetUserRoles
                 IF OBJECT_ID('dbo.AspNetRoles', 'U') IS NOT NULL
