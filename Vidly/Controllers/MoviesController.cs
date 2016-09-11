@@ -41,7 +41,8 @@ namespace Vidly.Controllers
 
             var moviewViewModel = new MovieFormViewModel
             {
-                Genres = genres
+                Genres = genres,
+                Movie = new Movie()
             };
             return View("MovieForm", moviewViewModel);
         }
