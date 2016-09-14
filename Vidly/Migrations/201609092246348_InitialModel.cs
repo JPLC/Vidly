@@ -6,7 +6,9 @@ namespace Vidly.Migrations
     {
         public override void Up()
         {
-            Sql(@"IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
+            Sql(@"IF OBJECT_ID('dbo.Rentals', 'U') IS NOT NULL
+                drop table dbo.Rentals
+                IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
                 drop table dbo.Customers
                 IF OBJECT_ID('dbo.Movies', 'U') IS NOT NULL
                 drop table dbo.Movies
